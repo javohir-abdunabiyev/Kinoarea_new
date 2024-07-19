@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(30, 37, 56, 1);
+    background-image: url("/img/backimg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-blend-mode: overlay;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    /* gap: 160px; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: rgba(255, 255, 255, 1);
+
+    a {
+        font-family: Qanelas;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 21.06px;
+        text-decoration: none;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.search_and_signin {
+    display: flex;
+    gap: 12px;
+    input {
+        width: 45px;
+        height: 43px;
+        border-radius: 10px;
+        opacity: 0px;
+        background: rgba(255, 255, 255, 1);
+        border: 0;
+    }
+
+    button {
+        width: 108px;
+        height: 43px;
+        border-radius: 10px;
+        opacity: 0px;
+        background: rgba(54, 87, 203, 1);
+        color: white;
+        border: 0;
+    }
+
+}
+
+.btn_shadow {
+    box-shadow: 0px 0px 15px 0px rgba(72, 113, 255, 0.8);
+    transition: .2s ease-in;
+}
+
+input {
+    padding-left: 10px;
+}
+
+input::placeholder {
+    padding-left: 15px;
+}
+
+.backimg {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.line {
+    width: 51.5px;
+    height: 0px;
+    border-radius: 2px;
+    border: 2px solid rgba(255, 255, 255, 1)
+}
+
+.movies_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    h1 {
+        font-family: Qanelas;
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 82.81px;
+        text-align: left;
+            
+    }
+}
+
+.genres_nav {
+    display: flex;
+    gap: 50px;
+    max-width: 704px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    text-wrap: nowrap;
+    a {
+        color: grey;
+    }
+}
+
+.first_sec {
+    margin-top: 60px;
+    margin-bottom: 65px;
+}
+
+.movies_block {
+    display: grid;
+    grid-template-columns: repeat(4, 310px);
+    gap: 23px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 130px;
+    img {
+        height: 462px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+    p {
+        font-family: Qanelas;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22.3px;
+        text-align: left;
+            
+    }
+}
+
+.show_all_images {
+    width: 200px;
+    height: 71px;
+    margin-bottom: 55px;
+    border-radius: 10px;
+    opacity: 0px;
+    color: rgba(255, 255, 255, 1);
+    background: none;
+    border: 3px solid rgba(255, 255, 255, 1);
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29.97px;
+    text-align: center;
+}
+
+.trailer_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-family: Qanelas;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 82.81px;
+        text-align: left;
+        color: white;
+    }
+    .show_all_trailers {
+        width: 148px;
+        height: 27px;
+        opacity: 0px;
+        color: white;
+        background: none;
+        border: 0;
+        font-family: Qanelas;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27.26px;
+            
+    }
+}
+
+.genres_a {
+    cursor: pointer;
+}
+
+.vid {
+    width: 1300px;
+    height: 650px;
+    border: 0;
+    border-radius: 15px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.trailers_list {
+    display: flex;
+    max-width: 1300px;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.traielrs_block {
+    width: 342.35px;
+    height: 245px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
