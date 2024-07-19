@@ -26,13 +26,18 @@ export const traielrsCont = document.querySelector(".trailers_list") as HTMLElem
 
 let showAllMovies: Boolean = false
 
+
+
 getBase(nowplayingMovies)
     .then(res => {
-        reload(res.results.splice(0, 8), imagesLoad, cont)
+        reload(res.results.slice(0, 8), imagesLoad, cont)
         show_all_images.onclick = () => {
             if(!showAllMovies) {
                 reload(res.results, imagesLoad, cont)
                 showAllMovies = true
+            } else {
+                reload(res.results.slice(0, 8), imagesLoad, cont)
+                showAllMovies = false
             }
         }
 

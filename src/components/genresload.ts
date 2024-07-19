@@ -33,11 +33,9 @@ export function genresLoad(item: any) {
                 show_all_movies = false;
 
                 show_all_images.onclick = () => {
-                    if (!show_all_movies) {
                         reload(res.data.results, imagesLoad, cont);
                         reload(res.data.results, videosLoad, traielrsCont);
                         show_all_movies = true;
-                    }
                 };
             })
             .catch(error => {
