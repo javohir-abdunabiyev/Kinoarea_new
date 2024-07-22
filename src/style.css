@@ -223,7 +223,27 @@ input::placeholder {
 }
 
 .traielrs_block {
+    position: relative;
     width: 342px;
     height: 245px;
     border-radius: 15px;
+    object-fit: cover;
+}
+
+.movies_name {
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.3px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 12px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }

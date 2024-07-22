@@ -5,17 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css">
     <link rel="shortcut icon" href="/img/cinema.png" type="image/x-icon">
-    <!-- Стиль Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- Скрипт Swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Kinoarea</title>
   </head>
   <body>
-    
-
-
     <div class="backimg">
       <header>
         <div class="container">
@@ -23,16 +16,13 @@
         </div>
       </header>
 
-
       <section class="first_sec">
         <div class="container">
           <div class="movies_section">
             <div class="movies_nav">
               <h1>Сейчас в кино</h1>
               <div class="line"></div>
-              <nav class="genres_nav">
-                
-              </nav>
+              <nav class="genres_nav"></nav>
             </div>
           </div>
         </div>
@@ -41,13 +31,10 @@
 
     <div class="container">
       <center>
-        <div class="movies_block">
-            
-        </div>
+        <div class="movies_block"></div>
         <button class="show_all_images">Все новинки</button>
       </center>
     </div>
-
 
     <section class="second_sec">
       <div class="container">
@@ -58,17 +45,19 @@
       </div>
     </section>
 
-
     <div class="container">
       <div class="video">
         <iframe src="https://www.youtube.com/embed/73_1biulkYk" class="vid"></iframe>
       </div>
-        <div class="trailers_list"></div>
+      <div class="trailers_list">
+        <div class="swiper">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
     </div>
 
-
-
-    
     <script type="module" src="/src/components/imgload.ts"></script>
     <script type="module" src="/src/lib/index.ts"></script>
     <script type="module" src="/src/main.ts"></script>
