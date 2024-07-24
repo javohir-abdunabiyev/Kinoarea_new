@@ -1,6 +1,8 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
+import { rate } from './components/personsRate';
+import { popularPersons } from './components/persons';
 import { popularMovies } from './components/popularMovies';
 import { headerReaload } from "./components/header"
 import { reload } from "./components/reload"
@@ -11,6 +13,8 @@ import { videosLoad } from "./components/loadtrailers"
 
 
 export const nowplayingMovies: any = ""
+const persons_rate = document.querySelector(".persons_rate") as HTMLElement
+const first_second_position = document.querySelector(".first_second_position") as HTMLElement
 export const video = document.querySelector("iframe")
 export const cont = document.querySelector(".movies_block") as HTMLElement
 export const show_all_images = document.querySelector(".show_all_images") as HTMLButtonElement
@@ -83,6 +87,12 @@ getData("/genre/movie/list")
 })
 
 
+getData("/person/popular")
+    .then(res => {
+        reload(res.results.slice(0, 2), popularPersons, first_second_position)
+        reload(res.results, rate, persons_rate)
+    })
+
 if(id) {
     getData("/discover/movie?with_genres=" + id).then((res) => 
     showOrHide(res.results))
@@ -103,3 +113,5 @@ function showOrHide(arr: any) {
         showAllMovies = false
     }
 }
+
+

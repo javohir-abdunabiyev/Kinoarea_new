@@ -315,3 +315,41 @@ input::placeholder {
 .active {
     color: white;
 }
+
+.first_second_position {
+    display: flex;
+    gap: 23px;
+}
+
+.act_img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.actors_block {
+    display: flex;
+    gap: 23px;
+}
+
+.persons_rate {
+    width: 400px;
+    height: 400px;
+    color: white;
+    overflow-y: auto;
+    scrollbar-width: none;
+    background: rgba(27, 33, 51, 1);
+}
+
+.popularity {
+    color: rgba(242, 246, 15, 1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.div_person{
+    margin-bottom: 5px;  
+    border-bottom: 1px solid grey;  
+    padding-left: 10px;
+}
