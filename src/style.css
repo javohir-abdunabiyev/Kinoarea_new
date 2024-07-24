@@ -51,7 +51,7 @@ a {
     display: flex;
     gap: 12px;
     input {
-        width: 45px;
+        width: 200px;
         height: 43px;
         border-radius: 10px;
         opacity: 0px;
@@ -246,4 +246,72 @@ input::placeholder {
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+}
+
+.top_side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 65px;
+    h1 {
+        font-family: Qanelas;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 82.81px;
+        text-align: left;
+    }
+    .release_date {
+        display: flex;
+        gap: 20px;
+        color: grey;
+    }
+}
+
+.swiper-slide {
+    position: relative;
+    p {
+        color: white;
+        margin-top: 12px;
+        font-family: Qanelas;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22.3px;
+        text-align: left;
+    }
+}
+
+
+.swiper-img {
+    position: relative;
+    border-radius: 15px;
+    width: 339.39px;
+    height: 462.91px;
+    object-fit: cover;
+}
+
+.votes_div {
+    position: absolute;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 12.46px;
+    right: 12.45px;
+    width: 62.28px;
+    height: 33.21px;
+    border-radius: 5px;
+    background: rgba(75, 203, 54, 1);
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.3px;
+}
+
+.year {
+    cursor: pointer;
+}
+
+.active {
+    color: white;
 }

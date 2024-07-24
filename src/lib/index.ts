@@ -2,10 +2,6 @@ import axios from 'axios';
 
 const base: string = "https://api.themoviedb.org/3";
 
-
-
-
-
 export async function getData(path: any): Promise<any> {
     try {
         const res = await axios.get(base + path, {
