@@ -1,6 +1,6 @@
 export function rate(item: any) {
     const div = document.createElement("div")
-    div.classList.add("div_person")
+    // div.classList.add(" ")
     const personName = document.createElement("p")
     personName.innerHTML = item.name
     const popularity = document.createElement("p")

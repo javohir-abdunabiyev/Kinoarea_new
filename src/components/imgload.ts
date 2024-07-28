@@ -13,6 +13,9 @@ export function imagesLoad(item: any) {
         body.style.backgroundImage = `url(${imgstarturl + item.backdrop_path})`;
         body.style.transition = ".3s ease-in"
     };
+    img.onclick = () => {
+        location.assign(`/src/pages/movies/?id=${item.id}`)
+    }
 
     img_div.append(img, img_title)
 

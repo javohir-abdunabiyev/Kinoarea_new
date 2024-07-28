@@ -106,12 +106,11 @@ if(id) {
 
 function showOrHide(arr: any) {
     if(!showAllMovies) {
-        reload(arr, imagesLoad, cont)
-        showAllMovies = true
-    } else {
         reload(arr.slice(0, 8), imagesLoad, cont)
+        showAllMovies = true
+        
+    } else {
+        reload(arr, imagesLoad, cont)
         showAllMovies = false
     }
 }
-
-

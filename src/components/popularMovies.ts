@@ -1,7 +1,6 @@
 import { getData } from "../lib"
 
 export function popularMovies(item: any) {
-
     const div = document.createElement("div")
     const img = document.createElement("img")
     const movie_name = document.createElement("p")

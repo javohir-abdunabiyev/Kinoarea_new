@@ -5,11 +5,13 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background: rgba(30, 37, 56, 1);
     background-image: url("/img/backimg.png");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-blend-mode: overlay;
 }
 
@@ -329,6 +331,8 @@ input::placeholder {
 }
 
 .actors_block {
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     gap: 23px;
 }
@@ -352,4 +356,79 @@ input::placeholder {
     margin-bottom: 5px;  
     border-bottom: 1px solid grey;  
     padding-left: 10px;
+}
+
+.email_submit {
+    width: 182px;
+    height: 71px;
+    border-radius: 10px;
+    background: rgba(242, 246, 15, 1);
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29.97px;
+}
+
+.first_page_footer {
+    img {
+        margin-bottom: 55px;
+    }
+    h1 {
+        margin-bottom: 25px;
+    }
+    p {
+        margin-bottom: 34px;
+    }
+    color: white;
+    input {
+        width: 425px;
+        height: 71px;
+        border-radius: 10px;
+    }
+}
+
+/* movies page */
+
+
+.about_movie {
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 50px;
+}
+
+.movie_poster {
+    width: 395px;
+    height: 539px;
+}
+
+.text {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.watch_trailer_btn {
+    width: 260px;
+    height: 71px;
+    background: none;
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29.97px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 1)
+}
+
+.mv_title {
+    font-family: Qanelas;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 82.81px;
+    text-align: left;
+    margin-bottom: 70px;
+}
+
+.what_about {
+    margin-top: 50px;
 }
