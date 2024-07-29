@@ -114,3 +114,10 @@ function showOrHide(arr: any) {
         showAllMovies = false
     }
 }
+
+
+
+
+// https://api.themoviedb.org/3
+
+
