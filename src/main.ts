@@ -10,15 +10,17 @@ import { imagesLoad } from "./components/imgload"
 import { getData } from "./lib"
 import { genresLoad } from "./components/genresload"
 import { videosLoad } from "./components/loadtrailers"
+import axios from 'axios';
 
 
 export const nowplayingMovies: any = ""
-const persons_rate = document.querySelector(".persons_rate") as HTMLElement
-const first_second_position = document.querySelector(".first_second_position") as HTMLElement
 export const video = document.querySelector("iframe")
 export const cont = document.querySelector(".movies_block") as HTMLElement
 export const show_all_images = document.querySelector(".show_all_images") as HTMLButtonElement
 export const traielrsCont = document.querySelector(".trailers_list") as HTMLElement
+const form = document.forms.namedItem("subscribe")
+const persons_rate = document.querySelector(".persons_rate") as HTMLElement
+const first_second_position = document.querySelector(".first_second_position") as HTMLElement
 // const search_inp = document.querySelector(".search_inp") as HTMLElement
 const mCont = document.querySelector('.swiper-wrapper') as HTMLElement
 const years_date = document.querySelectorAll(".year")
@@ -116,8 +118,24 @@ function showOrHide(arr: any) {
 }
 
 
+form.onsubmit = (e:  any) => {
+    e.preventDefault();
+
+    const fm = new FormData(e.target)
+
+    const app = {
+        email: fm.get("email")
+    }
+
+    let mail: string = `+ Новый подписчик \n Почта: ${app.email}`
 
 
-// https://api.themoviedb.org/3
+    axios.post(`https://api.telegram.org/bot${"7403629476:AAHFWErr6gveumC9BwS2B7kQlQv4vJWCYsU"}/sendMessage`, {
+        chat_id: -1002239673610,
+        text: mail,
+        mode: "html"
+    })
 
 
+    form.reset()
+}

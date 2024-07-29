@@ -4,6 +4,7 @@ import { reload } from "../../components/reload";
 import { moviesLoad } from "../../components/moviespageLoad";
 import { characters } from "../../components/movieCharacter";
 import { actorsImg } from "../../components/actors";
+import { poster } from "../../components/moviesposters";
 
 
 const movie_genres_section = document.querySelector(".movie_genres_section")
@@ -16,6 +17,7 @@ const id = location.search.split('=').at(-1);
 const imgstarturl = "https://image.tmdb.org/t/p/original"
 const p_s = document.createElement("p")
 const actors_section  = document.querySelector(".actors_section")
+const poster_sec: HTMLElement = document.querySelector(".poster_sec")
 
 
 headerReaload(header)
@@ -41,7 +43,13 @@ getData(`/movie/${id}`)
 
 getData(`/movie/${id}/credits`)
 .then(res => {
-    reload(res.cast, actorsImg, actors_section)
+    reload(res.cast.slice(0, 10), actorsImg, actors_section)
 })
 .catch(error => console.error('Ошибка:', error));
 
+getData(`/movie/${id}/images`)
+    .then(res => {
+        console.log(res.backdrops);
+        reload(res.backdrops.slice(0, 6), poster, poster_sec)
+        
+    })

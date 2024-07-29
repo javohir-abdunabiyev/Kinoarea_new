@@ -466,3 +466,49 @@ input::placeholder {
     border-radius: 5px;
     object-fit: cover;
 }
+
+.div_for_trailers {
+    position: relative;
+}
+
+.play_button {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+}
+
+.actors_section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 248px);
+    gap: 30px;
+}
+
+.actor_name {
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.3px;
+    text-align: left;
+    color: white;
+    margin-top: 15px;
+}
+
+.character{
+    font-family: Qanelas;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.04px;
+    text-align: left;
+    color: rgba(242, 246, 15, 1);
+}
+
+.poster_sec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.poster_img {
+    max-width: 300px;
+    max-height: 200px;
+}
