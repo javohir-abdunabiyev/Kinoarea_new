@@ -16,7 +16,7 @@ import axios from 'axios';
 export const nowplayingMovies: any = ""
 export const video = document.querySelector("iframe")
 export const cont = document.querySelector(".movies_block") as HTMLElement
-export const show_all_images = document.querySelector(".show_all_images") as HTMLButtonElement
+export const show_all_images = document.querySelector(".show_all_images") as HTMLElement
 export const traielrsCont = document.querySelector(".trailers_list") as HTMLElement
 const form = document.forms.namedItem("subscribe")
 const persons_rate = document.querySelector(".persons_rate") as HTMLElement

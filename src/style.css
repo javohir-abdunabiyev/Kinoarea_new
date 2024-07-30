@@ -5,6 +5,10 @@
 }
 
 body {
+    background: rgba(30, 37, 56, 1);
+}
+
+.f_page_body {
     width: 100%;
     height: 100%;
     background: rgba(30, 37, 56, 1);
@@ -23,6 +27,12 @@ body {
     background-position: top;
     background-size: contain;
     background-blend-mode: overlay;
+}
+
+.actors_page_body {
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 37, 56, 1);
 }
 
 .container {
@@ -505,10 +515,86 @@ input::placeholder {
 
 .poster_sec {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 400px);
+    justify-content: center;
+    gap: 23px;
+    img {
+        width: 400px;
+        border-radius: 10px;
+    }
 }
 
 .poster_img {
-    max-width: 300px;
+    max: 700px;
     max-height: 200px;
+}
+
+.actors_section {
+    margin-top: 50px;
+    margin-bottom: 82px;
+}
+
+.roles {
+    color: white;
+    font-family: Qanelas;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 82.81px;
+    text-align: left;
+}
+
+.videos_types {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    .vid_type {
+        width: 110px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        background: none;
+        color: grey;
+    }
+}
+
+.vid_type_active {
+    background: rgba(54, 87, 203, 1);
+    color: white;
+}
+
+.movie_vid {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.vidTip {
+    width: 1300px;
+    height: 650px;
+    border: 0;
+    border-radius: 15px;
+}
+
+.div_for_vidTip {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.tip_video {
+    width: 1300px;
+    height: 650px;
+    border: 0;
+    border-radius: 15px;
+}
+
+.actor_poster {
+    width: 395px;
+    height: 539px;
+    border-radius: 10px;
+}
+
+.bio_div {
+    display: flex;
+    max-width: 500px;
 }

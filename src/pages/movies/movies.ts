@@ -5,11 +5,12 @@ import { moviesLoad } from "../../components/moviespageLoad";
 import { characters } from "../../components/movieCharacter";
 import { actorsImg } from "../../components/actors";
 import { poster } from "../../components/moviesposters";
-
+import { youtubeUrl } from "../../components/loadtrailers";
 
 const movie_genres_section = document.querySelector(".movie_genres_section")
 const movie_title = document.querySelector(".movie_title")
 const ab_mv_place = document.querySelector(".ab_mv_place")
+const tipBns = document.querySelectorAll(".vid_type")
 const img = document.querySelector("img");
 const body: HTMLElement = document.body
 const header: HTMLElement = document.querySelector("header")
@@ -17,7 +18,8 @@ const id = location.search.split('=').at(-1);
 const imgstarturl = "https://image.tmdb.org/t/p/original"
 const p_s = document.createElement("p")
 const actors_section  = document.querySelector(".actors_section")
-const poster_sec: HTMLElement = document.querySelector(".poster_sec")
+const poster_sec: HTMLElement = document.querySelector(".poster_sec") as HTMLElement
+const video = document.querySelector("iframe")
 
 
 headerReaload(header)
@@ -35,12 +37,6 @@ getData(`/movie/${id}`)
     });
 
 
-// getData(`movie/${id}/similar`)
-//     .then(res => {
-//         console.log(res.results);
-        
-//     })
-
 getData(`/movie/${id}/credits`)
 .then(res => {
     reload(res.cast.slice(0, 10), actorsImg, actors_section)
@@ -53,3 +49,21 @@ getData(`/movie/${id}/images`)
         reload(res.backdrops.slice(0, 6), poster, poster_sec)
         
     })
+
+//     tipBns.forEach((btn: any) => {
+//     const elem = btn as HTMLElement;
+
+//     let btnData = elem.dataset.type;
+
+//     btn.onclick = () => {
+
+//         tipBns.forEach((bt: any) => bt.classList.remove("vid_type_active"))
+//         elem.classList.add("vid_type_active")
+
+//         getData(`/movie/${id}/videos`)
+//             .then(res => {
+//                 const vidObj = res.results.find((el: any) => el.type === btnData)
+//                 video.src = youtubeUrl + vidObj.key
+//             })
+//     }
+// })

@@ -2,7 +2,7 @@ import { imgstarturl } from "./imgload"
 import { video } from "../main"
 import { getData } from "../lib";
 
-const youtubeUrl: string = "https://www.youtube.com/embed/"
+export const youtubeUrl: string = "https://www.youtube.com/embed/"
 
 export function videosLoad(item: any) {
     
