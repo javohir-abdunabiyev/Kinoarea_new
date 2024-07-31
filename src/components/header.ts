@@ -1,4 +1,4 @@
-const search_modal = document.querySelector(".search_modal")
+const search_modal = document.querySelector(".search_modal") as HTMLDialogElement
 
 export function headerReaload(place: HTMLElement) {
     place.innerHTML = ""
