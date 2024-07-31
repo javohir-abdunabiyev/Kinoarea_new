@@ -14,7 +14,7 @@ export function popularMovies(item: any) {
     img.src = `https://image.tmdb.org/t/p/original${item.poster_path}`
     
     getData(`https://api.themoviedb.org/3/account/${item.id}/rated/movies`)
-        .then(res => {
+        .then(() => {
             votes_div.innerHTML = item.vote_average
         })
 
