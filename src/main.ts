@@ -92,6 +92,8 @@ getData("/genre/movie/list")
 getData("/person/popular")
     .then(res => {
         reload(res.results.slice(0, 2), popularPersons, first_second_position)
+        console.log(res.results);
+        
         reload(res.results, rate, persons_rate)
     })
 

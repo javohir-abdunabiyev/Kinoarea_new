@@ -596,5 +596,48 @@ input::placeholder {
 
 .bio_div {
     display: flex;
+    gap: 20px; 
     max-width: 500px;
+    margin-bottom: 10px;
+}
+
+.div_for_all {
+    display: flex;
+    gap: 51px;
+}
+
+.actor_bio {
+    display: flex;
+    justify-content: center;
+}
+
+.act_bio_name {
+    font-family: Qanelas;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 82.81px;
+    text-align: left;
+    color: white;
+}
+
+.bio_txt {
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.73px;
+    text-align: left;
+    color: white;   
+}
+
+.bio_answer {
+    font-family: Qanelas;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.42px;
+    text-align: left;
+    color: rgba(242, 246, 15, 1);
+}
+
+.bio {
+    margin-top: 40px;
 }
