@@ -1,5 +1,7 @@
 import { getData } from "../lib"
 
+const search_modal = document.querySelector(".search_modal")
+
 export function headerReaload(place: HTMLElement) {
     place.innerHTML = ""
 
@@ -40,7 +42,7 @@ export function headerReaload(place: HTMLElement) {
     }
 
     search.onclick = () => {
-        
+        search_modal.showModal()
     }
 
     signin_a.append(signin)

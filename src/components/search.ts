@@ -1,5 +1,6 @@
 import { imgstarturl } from "./imgload"
 
+
 export function searchFunc(item: any) {
     const div = document.createElement("div")
     const img = document.createElement("img")
