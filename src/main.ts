@@ -27,7 +27,7 @@ const mCont = document.querySelector('.swiper-wrapper') as HTMLElement
 const years_date = document.querySelectorAll(".year")
 const genresPlace = document.querySelector(".genres_nav") as HTMLElement
 const header = document.querySelector(".header") as HTMLElement
-const id = location.search.split("=").at(-1)
+const id = location.search.split("=")?.at(-1)
 let showAllMovies: Boolean = false
 headerReaload(header)
 
