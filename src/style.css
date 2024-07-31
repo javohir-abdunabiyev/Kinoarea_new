@@ -8,18 +8,33 @@ body {
     background: rgba(30, 37, 56, 1);
 }
 
-.f_page_body {
-    width: 100%;
-    height: 100%;
-    background: rgba(30, 37, 56, 1);
-    background-image: url("/img/backimg.png");
+.backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background: url("/img/backimg.png");
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    background-blend-mode: overlay;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    transition: .5s ease;
 }
 
-.movies_body {
+.backdrop::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(211, 156, 85, 0) 0%, rgba(30, 37, 56, 1) 90%);
+}
+
+
+/* .movies_body {
     width: 100%;
     height: 100%;
     background: rgba(30, 37, 56, 1);
@@ -27,7 +42,7 @@ body {
     background-position: top;
     background-size: contain;
     background-blend-mode: overlay;
-}
+} */
 
 .actors_page_body {
     width: 100%;
@@ -73,11 +88,9 @@ a {
     display: flex;
     gap: 12px;
     input {
-        width: 200px;
+        width: 43px;
         height: 43px;
         border-radius: 10px;
-        opacity: 0px;
-        background: rgba(255, 255, 255, 1);
         border: 0;
     }
 
@@ -640,4 +653,10 @@ input::placeholder {
 
 .bio {
     margin-top: 40px;
+}
+
+.searchPoster {
+    width: 78px;
+    height: 107px;
+    border-radius: 10px;
 }

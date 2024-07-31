@@ -1,6 +1,6 @@
 export const imgstarturl: URL = new URL("https://image.tmdb.org/t/p/original");
 
-const body: HTMLElement = document.body
+const backdrop = document.querySelector(".backdrop")
 
 export function imagesLoad(item: any) {
     const img_div: HTMLElement = document.createElement("div")
@@ -9,10 +9,11 @@ export function imagesLoad(item: any) {
     img.src = imgstarturl + item.poster_path
     img_title.innerHTML = item.title
     
-    img.onmouseenter = () => {
-        body.style.backgroundImage = `url(${imgstarturl + item.backdrop_path})`;
-        body.style.transition = ".3s ease-in"
-    };
+        img.onmouseenter = () => {
+            backdrop.style.background = `url(${imgstarturl + item.backdrop_path})`;
+            backdrop.style.backgroundSize = 'cover';
+        };
+        
     img.onclick = () => {
         location.assign(`/src/pages/movies/?id=${item.id}`)
     }

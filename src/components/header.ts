@@ -17,8 +17,9 @@ export function headerReaload(place: HTMLElement) {
     const signin_a = document.createElement("a")
     const signin = document.createElement("button")
     search_and_signin.classList.add("search_and_signin")
+    search.type = "button"
     nav.classList.add("nav")
-    search.className = "search_inp"
+    search.classList.add("search_btn")
     one_a.innerHTML = "Афиша"
     two_a.innerHTML = "Медиа"
     three_a.innerHTML = "Фильмы"
@@ -28,7 +29,6 @@ export function headerReaload(place: HTMLElement) {
     seven_a.innerHTML = "Категории"
     signin.innerHTML = "Войти"
     logo.src = "/img/logo.png"
-    search.type = "search"
 
     signin.onmouseenter = () => {
         signin.classList.add("btn_shadow")
@@ -39,11 +39,8 @@ export function headerReaload(place: HTMLElement) {
         signin.style.transition = ".2s ease-in"
     }
 
-    search.onkeyup = () => {
-        getData(`/search/multi?query=${search.value}`)
-            .then(res => {
-                console.log(res);
-            })
+    search.onclick = () => {
+        
     }
 
     signin_a.append(signin)
@@ -51,3 +48,11 @@ export function headerReaload(place: HTMLElement) {
     nav.append(one_a, two_a, three_a, four_a, five_a, six_a, seven_a, )
     place.append(logo, nav, search_and_signin)
 }
+
+
+
+
+// getData(`/search/multi?query=${search.value}`)
+//             .then(res => {
+//                 console.log(res);
+//             })
