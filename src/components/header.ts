@@ -1,5 +1,3 @@
-import { getData } from "../lib"
-
 const search_modal = document.querySelector(".search_modal")
 
 export function headerReaload(place: HTMLElement) {
@@ -49,12 +47,4 @@ export function headerReaload(place: HTMLElement) {
     search_and_signin.append(search, signin)
     nav.append(one_a, two_a, three_a, four_a, five_a, six_a, seven_a, )
     place.append(logo, nav, search_and_signin)
-}
-
-
-
-
-// getData(`/search/multi?query=${search.value}`)
-//             .then(res => {
-//                 console.log(res);
-//             })
+} 

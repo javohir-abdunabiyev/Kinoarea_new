@@ -10,6 +10,7 @@ import { imagesLoad } from "./components/imgload"
 import { getData } from "./lib"
 import { genresLoad } from "./components/genresload"
 import { videosLoad } from "./components/loadtrailers"
+import { searchFunc } from './components/search';
 import axios from 'axios';
 
 
@@ -21,7 +22,7 @@ export const traielrsCont = document.querySelector(".trailers_list") as HTMLElem
 const form = document.forms.namedItem("subscribe")
 const persons_rate = document.querySelector(".persons_rate") as HTMLElement
 const first_second_position = document.querySelector(".first_second_position") as HTMLElement
-// const search_inp = document.querySelector(".search_inp") as HTMLElement
+const search_inp = document.querySelector(".search_inp") as HTMLElement
 const mCont = document.querySelector('.swiper-wrapper') as HTMLElement
 const years_date = document.querySelectorAll(".year")
 const genresPlace = document.querySelector(".genres_nav") as HTMLElement
@@ -141,3 +142,9 @@ form.onsubmit = (e:  any) => {
 
     form.reset()
 }
+
+getData(`/search/multi?query=${search_inp.value}`)
+    .then(res => {
+        console.log((res));
+        
+    })
