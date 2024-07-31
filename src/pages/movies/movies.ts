@@ -6,12 +6,12 @@ import { characters } from "../../components/movieCharacter";
 import { actorsImg } from "../../components/actors";
 import { poster } from "../../components/moviesposters";
 
-const ab_mv_place = document.querySelector(".ab_mv_place")
-const backdrop = document.querySelector(".backdrop")
-const header: HTMLElement = document.querySelector("header")
+const ab_mv_place = document.querySelector(".ab_mv_place") as HTMLElement
+const backdrop = document.querySelector(".backdrop") as HTMLElement
+const header: HTMLElement = document.querySelector("header") as HTMLElement
 const id = location.search.split('=').at(-1);
 const imgstarturl = "https://image.tmdb.org/t/p/original"
-const actors_section  = document.querySelector(".actors_section")
+const actors_section  = document.querySelector(".actors_section") as HTMLElement
 const poster_sec: HTMLElement = document.querySelector(".poster_sec") as HTMLElement
 const video = document.querySelector("iframe")
 

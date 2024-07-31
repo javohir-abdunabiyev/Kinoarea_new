@@ -7,7 +7,7 @@ export function moviesLoad(item: any) {
     about_movie.classList.add("about_movie")
 
 
-    const img = document.createElement("img") as HTMLElement
+    const img = document.createElement("img")
     img.src = imgstarturl + item.poster_path;
     img.classList.add("movie_poster")
 

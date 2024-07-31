@@ -1,6 +1,6 @@
 export const imgstarturl: URL = new URL("https://image.tmdb.org/t/p/original");
 
-const backdrop = document.querySelector(".backdrop")
+const backdrop = document.querySelector(".backdrop") as HTMLElement
 
 export function imagesLoad(item: any) {
     const img_div: HTMLElement = document.createElement("div")

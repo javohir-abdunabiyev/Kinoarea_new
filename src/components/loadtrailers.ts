@@ -8,7 +8,7 @@ export function videosLoad(item: any) {
     
     const div_for_trailers = document.createElement("div")
     div_for_trailers.classList.add("div_for_trailers")
-    const traielrs_block: HTMLElement = document.createElement("img")
+    const traielrs_block = document.createElement("img")
     const movies_name = document.createElement("p")
     const play_button = document.createElement("div")
     play_button.classList.add("play_button")

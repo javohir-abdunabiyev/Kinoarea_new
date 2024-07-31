@@ -1,10 +1,9 @@
 const realise_year = document.querySelectorAll(".realise_year")
-const movie_country = document.querySelector(".movie_country")
-const id = location.search.split('=').at(-1);
-const slogan = document.querySelector(".tagline")
-const genre = document.querySelector(".genre")
-const movie_time = document.querySelector(".movie_time")
-const gather = document.querySelector(".gather")
+const movie_country = document.querySelector(".movie_country") as HTMLElement
+const slogan = document.querySelector(".tagline") as HTMLElement
+const genre = document.querySelector(".genre") as HTMLElement
+const movie_time = document.querySelector(".movie_time") as HTMLElement
+const gather = document.querySelector(".gather") as HTMLElement
 
 export function characters(item: any) {
     movie_time.innerHTML += ' ' + item.runtime + ' ' + 'мин.'
