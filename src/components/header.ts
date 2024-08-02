@@ -1,4 +1,5 @@
 const search_modal = document.querySelector(".search_modal") as HTMLDialogElement
+const close_modal = document.querySelector(".close_modal") as HTMLElement
 
 export function headerReaload(place: HTMLElement) {
     place.innerHTML = ""
@@ -39,8 +40,16 @@ export function headerReaload(place: HTMLElement) {
         signin.style.transition = ".2s ease-in"
     }
 
+    logo.onclick = () => {
+        location.assign("/")
+    }
+
     search.onclick = () => {
         search_modal.showModal()
+    }
+
+    close_modal.onclick = () => {
+        search_modal.close()
     }
 
     signin_a.append(signin)

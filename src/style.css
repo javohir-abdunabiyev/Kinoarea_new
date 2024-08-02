@@ -650,8 +650,41 @@ input::placeholder {
     border-radius: 10px;
 }
 
+.search_modal {
+    left: 23%;
+    border: 0;
+    background: none;
+    overflow-y: hidden;
+}
+
 .search_inp {
     width: 815px;
     height: 71px;
     border-radius: 10px;
+}
+
+.search_answer {
+    max-height: 700px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.search_answer_div {
+    display: flex;
+    gap: 18px;
+    width: 815px;
+    height: 137px;
+    border-radius: 10px;
+    background: rgba(30, 37, 56, 1);
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: white;
+}
+
+.close_modal {
+    margin-left: 40px;
+    color: white;
+    cursor: pointer;
 }

@@ -21,9 +21,7 @@ headerReaload(header)
 
 getData(`/movie/${id}`)
     .then(res => {
-        console.log(res);
         characters(res)
-        
         reload([res], moviesLoad, ab_mv_place)
         backdrop.style.backgroundImage = `url(${imgstarturl + res.backdrop_path})`;
         backdrop.style.backgroundSize = 'cover'; // Добавьте это свойство
@@ -41,9 +39,7 @@ getData(`/movie/${id}/credits`)
 
 getData(`/movie/${id}/images`)
     .then(res => {
-        console.log(res.backdrops);
         reload(res.backdrops.slice(0, 6), poster, poster_sec)
-        
     })
 
 getData(`/movie/${id}/videos`)

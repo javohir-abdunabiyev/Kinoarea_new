@@ -10,7 +10,7 @@ import { imagesLoad } from "./components/imgload"
 import { getData } from "./lib"
 import { genresLoad } from "./components/genresload"
 import { videosLoad } from "./components/loadtrailers"
-// import { searchFunc } from './components/search';
+import { searchFunc } from './components/search';
 import axios from 'axios';
 
 
@@ -19,6 +19,8 @@ export const video = document.querySelector("iframe")
 export const cont = document.querySelector(".movies_block") as HTMLElement
 export const show_all_images = document.querySelector(".show_all_images") as HTMLElement
 export const traielrsCont = document.querySelector(".trailers_list") as HTMLElement
+const search_answer_place = document.querySelector(".search_answer") as HTMLElement
+const search_inp = document.querySelector(".search_inp") as HTMLElement
 const form = document.forms.namedItem("subscribe") as HTMLFormElement
 const persons_rate = document.querySelector(".persons_rate") as HTMLElement
 const first_second_position = document.querySelector(".first_second_position") as HTMLElement
@@ -94,8 +96,6 @@ getData("/genre/movie/list")
 getData("/person/popular")
     .then(res => {
         reload(res.results.slice(0, 2), popularPersons, first_second_position)
-        console.log(res.results);
-        
         reload(res.results, rate, persons_rate)
     })
 
@@ -144,8 +144,26 @@ form.onsubmit = (e:  any) => {
     form.reset()
 }
 
-// getData(`/search/multi?query=${search_inp.value}`)
-//     .then(res => {
-//         console.log((res));
-        
-//     })
+
+function debounce(func: any, timeout = 600) {
+    let timer: any; 
+    return (...args: any) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this, args);
+        }, timeout);
+    };
+}
+
+const debouncedSearch = debounce((e: any) => {
+    getData(`/search/multi?query=${e.target.value}`)
+    .then(res => {
+        console.log((res));
+        reload(res.results, searchFunc, search_answer_place)
+    })
+}, 600);
+
+search_inp.onkeyup = debouncedSearch;
+
+
+
