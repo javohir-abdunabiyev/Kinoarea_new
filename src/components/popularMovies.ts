@@ -18,6 +18,10 @@ export function popularMovies(item: any) {
             votes_div.innerHTML = item.vote_average
         })
 
+        img.onclick = () => {
+            location.assign(`/src/pages/movies/?id=${item.id}`)
+        }
+
         
     div.append(img, movie_name, movie_genre, votes_div)
     

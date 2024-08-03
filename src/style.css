@@ -13,11 +13,11 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    height: 100vh;
+    height: 100vh   ;
     background: url("/img/backimg.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     opacity: 0.5;
     z-index: -1;
     transition: .5s ease;
@@ -40,13 +40,12 @@ body {
 }
 
 .container {
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .header {
     display: flex;
-    /* gap: 160px; */
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -58,7 +57,6 @@ body {
     align-items: center;
     gap: 50px;
     color: rgba(255, 255, 255, 1);
-
     a {
         font-family: Qanelas;
         font-size: 17px;
@@ -66,7 +64,6 @@ body {
         line-height: 21.06px;
         text-decoration: none;
     }
-
 }
 
 a {
@@ -138,7 +135,7 @@ input::placeholder {
 .genres_nav {
     display: flex;
     gap: 50px;
-    max-width: 704px;
+    width: 704px;
     overflow-x: auto;
     scrollbar-width: none;
     text-wrap: nowrap;
@@ -154,7 +151,7 @@ input::placeholder {
 
 .movies_block {
     display: grid;
-    grid-template-columns: repeat(4, 310px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 23px;
     justify-content: center;
     align-items: center;

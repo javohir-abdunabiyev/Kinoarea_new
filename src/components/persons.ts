@@ -8,5 +8,6 @@ export function popularPersons(item: any) {
         location.assign(`/src/pages/actors/?id=${item.id}`)
     }
 
+
     return img
 }
