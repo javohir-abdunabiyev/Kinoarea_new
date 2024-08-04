@@ -164,12 +164,176 @@
     .container {
         max-width: 500px;
     }
-    .nav {
-        display: none;  
-    }
     .movies_nav {
         h1 {
             font-size: 45px;
         }
+    }
+    .margin {
+        margin-bottom: 20px;
+    }
+    .menu_div {
+        width: 425px;
+        height: 441px;
+        background: rgba(30, 37, 56, 1);
+        opacity: .9;
+    }
+    .menu_modal {
+        border: 0;
+        overflow: hidden;
+        left: 13%;
+    }
+    .movies_nav {
+        .genres_nav {
+            width: 500px;
+        }
+    }
+    .movies_block {
+        grid-template-columns: repeat(2, 210px);
+        img {
+            height: 297.89px;
+        }
+    }
+    .trailer_top {
+        h1 {
+            font-size: 35px;
+        }
+    }
+    .trailers_list {
+        max-width: 500px;
+    }
+    .act_img {
+        width: 280px;
+        height: 280px;
+    }
+    .persons_rate {
+        max-width: 470px;
+    }
+    .subscribe {
+        input {
+            width: 200px;
+        }
+    }
+    .search_modal {
+        left: 20px;
+        .search_inp {
+            max-width: 400px;
+        }
+    }
+    .search_answer_div {
+        max-width: 450px;
+        max-height: 100px;
+        .searchPoster {
+            max-height: 80px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    }
+    .first_page_footer {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .close_menu {
+        position: absolute;
+        color: white;
+        background: none;
+        border: 0;
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+    }
+    .first_page_footer {
+        input {
+            max-width: 250px;
+        }
+        .email_submit {
+            max-width: 130px;
+        }
+    }
+}
+
+
+@media (max-width:576px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .movies_nav {
+        text-align: center;
+    }
+    .movies_block {
+        grid-template-columns: repeat(2, 170px);
+        img {
+            width: 178.08px;
+            height: 242.9px;
+        }
+    }
+    .genres_modal_btn {
+        width: 43px;
+        height: 43px;
+        border-radius: 10px;
+        border: 0;
+    }
+    .movies_section {
+        display: flex;
+        text-align: center;
+        margin-right: 0;         
+    }
+    .movies_nav {
+        display: flex;
+        gap: 20px;
+        h1 {
+            display: flex;
+            text-align: center;
+            font-size: 30px; 
+        }
+    }
+    .genres_modal {
+        width: 425px;
+        height: 441px;
+        background: rgba(30, 37, 56, 1);
+        opacity: .9;
+        color: white;
+        text-align: center;
+        border: 0;
+        left: 5%;
+    }
+    .trailers_list {
+        max-width: 360px;
+    }
+    .persons_rate {
+        width: 328px;
+        height: 266px;
+        margin-left: 10px;
+    }
+    .top_side {
+        h1 {
+            font-size: 35px;
+        }
+    }
+    .act_img {
+        width: 179px;
+        height: 179px;
+    }
+    .search_modal {
+        .search_inp {
+            max-width: 280px;
+        }
+        .search_answer_div {
+            max-width: 320px;
+            max-height: 80px;
+        }
+        .searchPoster {
+            max-height: 60px;
+        }
+    }
+    .years_btn {
+        width: 43px;
+        height: 43px;
+        border-radius: 10px;
+        border: 0;
     }
 }

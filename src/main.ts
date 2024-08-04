@@ -19,16 +19,22 @@ export const video = document.querySelector("iframe")
 export const cont = document.querySelector(".movies_block") as HTMLElement
 export const show_all_images = document.querySelector(".show_all_images") as HTMLElement
 export const traielrsCont = document.querySelector(".trailers_list") as HTMLElement
+const show_all_trailers = document.querySelector(".show_all_trailers") as HTMLElement
 const search_answer_place = document.querySelector(".search_answer") as HTMLElement
 const search_inp = document.querySelector(".search_inp") as HTMLElement
 const form = document.forms.namedItem("subscribe") as HTMLFormElement
 const persons_rate = document.querySelector(".persons_rate") as HTMLElement
 const first_second_position = document.querySelector(".first_second_position") as HTMLElement
-// const search_inp = document.querySelector(".search_inp") as HTMLElement
+const genres_modal = document.querySelector(".genres_modal")
 const mCont = document.querySelector('.swiper-wrapper') as HTMLElement
 const years_date = document.querySelectorAll(".year")
 const genresPlace = document.querySelector(".genres_nav") as HTMLElement
 const header = document.querySelector(".header") as HTMLElement
+const genres_modal_btn = document.querySelector(".genres_modal_btn") as HTMLElement
+const release_data = document.querySelector(".release_date") as HTMLDivElement
+const years_btn = document.querySelector(".years_btn") as HTMLElement
+const years_modal = document.querySelector(".years_modal")
+const top_side = document.querySelector(".top_side") as HTMLElement
 let id: any = location.search.split('=')
 id = id[id.length - 1]
 let showAllMovies: Boolean = false
@@ -50,6 +56,25 @@ years_date.forEach((year: any) => {
                 }
             });
         });
+
+
+        function datesFunc() {
+            if(window.innerWidth <= 576) {
+                top_side.style.display = "flex"
+                release_data.style.display = "none"
+                years_btn.style.display = "flex"
+            } else {
+                release_data.style.display = "flex"
+                years_btn.style.display = "none"
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            datesFunc()
+        });
+        datesFunc()
+
+
     year.onclick = () => {
         let yearDate = elem.dataset.year;
         years_date.forEach((y: any) => y.classList.remove('active'))
@@ -67,6 +92,11 @@ years_date.forEach((year: any) => {
                 } else {
                     slidesPerView = 4;
                 }
+                if(window.innerWidth <= 576) {
+                    slidesPerView = 2;
+                } else {
+                    slidesPerView = 3;
+                }
     
                 return new Swiper('.swiper', {
                     modules: [Navigation],
@@ -77,6 +107,8 @@ years_date.forEach((year: any) => {
                         prevEl: '.swiper-button-prev'
                     }
                 });
+
+                
             }
     
             let swiper = initializeSwiper();
@@ -105,7 +137,24 @@ getData("/movie/now_playing")
 
 getData("/genre/movie/list")
 .then(res => {
-    reload([{name: "All"}, ...res.genres], genresLoad, genresPlace)
+    function updateNavDisplay() {
+        if (window.innerWidth <= 576) {
+            reload([{name: "All"}, ...res.genres], genresLoad, genres_modal)
+            genresPlace.style.display = "none"
+            genres_modal_btn.style.display = "block"
+            show_all_trailers.style.display = "none"
+        } else {
+            reload([{name: "All"}, ...res.genres], genresLoad, genresPlace)
+            genresPlace.style.display = "flex"
+            genres_modal_btn.style.display = "none"
+            show_all_trailers.style.display = "flex"
+        }
+    }
+
+    window.onresize = () => {
+        updateNavDisplay()
+    }
+    updateNavDisplay();
 })
 
 
@@ -181,5 +230,10 @@ const debouncedSearch = debounce((e: any) => {
 
 search_inp.onkeyup = debouncedSearch;
 
+genres_modal_btn.onclick = () => {
+    genres_modal.showModal()
+}
 
-
+years_btn.onclick = () => {
+    years_modal.showModal()
+}

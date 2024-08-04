@@ -685,3 +685,22 @@ input::placeholder {
     color: white;
     cursor: pointer;
 }
+
+.menu_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_modal {
+    border: 0;
+    width: 425px;
+    height: 441px;
+    background: rgba(30, 37, 56, 1);
+    opacity: .9;
+    color: white;
+    text-align: center;
+}
+
+.years_none {
+    display: none;
+}
