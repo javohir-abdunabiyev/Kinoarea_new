@@ -336,4 +336,7 @@
         border-radius: 10px;
         border: 0;
     }
+    .menu_modal {
+        left: 20px;
+    }
 }

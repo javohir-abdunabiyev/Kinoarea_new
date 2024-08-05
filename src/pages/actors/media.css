@@ -1,0 +1,67 @@
+@media(max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    .nav {
+        width: 483px;
+        overflow: auto;
+        scrollbar-width: none;
+    }
+    .actor_poster {
+        width: 291px;
+        height: 387.68px;
+    }
+    .act_bio_name {
+        font-size: 40px;
+        line-height: 50.96px;
+    }
+    .bio_div {
+        font-size: 16px;
+        line-height: 19.57px;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 500px;
+    }
+    .actor_poster {
+        width: 271px;
+        height: 361.03px;
+    }
+    .act_bio_name {
+        font-size:30px;
+        line-height: 50.96px;
+    }
+    .bio_txt {
+        font-size: 16px;
+    }
+    .bio_answer {
+        font-size: 16px;
+    }
+    .div_for_all {
+        gap: 30px;
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        width: 100%;
+        padding: 0 50px;
+    }
+    .div_for_all {
+        flex-direction: column;
+    }
+    .header {
+        gap: 15px;
+    }
+    .margin {
+        max-width: 80px;
+    }
+}
