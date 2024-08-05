@@ -62,6 +62,7 @@ export function headerReaload(place: HTMLElement) {
             signin.classList.add("margin");
             logo.classList.add("margin");
             nav.style.display = "none";
+            showModal_btn.style.display = "block"
         } else {
             one_a.classList.remove("margin");
             two_a.classList.remove("margin");
@@ -73,6 +74,7 @@ export function headerReaload(place: HTMLElement) {
             signin.classList.remove("margin");
             logo.classList.remove("margin");
             nav.style.display = "flex";
+            showModal_btn.style.display = "none"
         }
     }
 

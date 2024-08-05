@@ -25,7 +25,7 @@ const search_inp = document.querySelector(".search_inp") as HTMLElement
 const form = document.forms.namedItem("subscribe") as HTMLFormElement
 const persons_rate = document.querySelector(".persons_rate") as HTMLElement
 const first_second_position = document.querySelector(".first_second_position") as HTMLElement
-const genres_modal = document.querySelector(".genres_modal")
+const genres_modal = document.querySelector(".genres_modal") as HTMLDialogElement
 const mCont = document.querySelector('.swiper-wrapper') as HTMLElement
 const years_date = document.querySelectorAll(".year")
 const genresPlace = document.querySelector(".genres_nav") as HTMLElement
@@ -33,7 +33,7 @@ const header = document.querySelector(".header") as HTMLElement
 const genres_modal_btn = document.querySelector(".genres_modal_btn") as HTMLElement
 const release_data = document.querySelector(".release_date") as HTMLDivElement
 const years_btn = document.querySelector(".years_btn") as HTMLElement
-const years_modal = document.querySelector(".years_modal")
+const years_modal = document.querySelector(".years_modal") as HTMLDialogElement
 const top_side = document.querySelector(".top_side") as HTMLElement
 let id: any = location.search.split('=')
 id = id[id.length - 1]

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="/src/mainmedia.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,67 +19,81 @@
       </dialog>
 
         <div class="container">
-            <header class="header"></header>
+                <header class="header"></header>
 
-        <div class="ab_mv_place">
+            <div class="ab_mv_place">
 
-        </div>
-
-
-
-    <section class="movie_genres_section">
-        <div class="first_sec_movie">
-            <p class="realise_year">Год:</p>
-            <p class="movie_country">Страна:</p>
-            <p class="tagline">Слоган:</p>
-            <p>Режиссер:</p>
-            <p>Сценарий:</p>
-            <p>Продюсер:</p>
-            <p>Оператор:</p>
-            <p>Композитор:</p>
-        </div>
-
-        <div class="second_sec">
-            <p>Художник:</p>
-            <p>Монтаж:</p>
-            <p class="genre">Жанр:</p>
-            <p class="gather">Сборы в мире:</p>
-            <p class="realise_year">Премьера (мир):</p>
-            <p>Премьера (РФ):</p>
-            <p>Возраст:</p>
-            <p class="movie_time">Время:</p>
-        </div>
-    </section>
+            </div>
 
 
-    <h1 class="roles">В главных ролях:</h1>
-    <section class="actors_section">
+
+            <section class="movie_genres_section">
+                <div class="first_sec_movie">
+                    <p class="realise_year">Год:</p>
+                    <p class="movie_country">Страна:</p>
+                    <p class="tagline">Слоган:</p>
+                    <p>Режиссер:</p>
+                    <p>Сценарий:</p>
+                    <p>Продюсер:</p>
+                    <p>Оператор:</p>
+                    <p>Композитор:</p>
+                </div>
+            
+                <div class="second_sec">
+                    <p>Художник:</p>
+                    <p>Монтаж:</p>
+                    <p class="genre">Жанр:</p>
+                    <p class="gather">Сборы в мире:</p>
+                    <p class="realise_year">Премьера (мир):</p>
+                    <p>Премьера (РФ):</p>
+                    <p>Возраст:</p>
+                    <p class="movie_time">Время:</p>
+                </div>
+            </section>
         
-    </section>
-
-    <section class="videos_sec">
-        <div class="videos_types">
-            <button data-type="Premiere" class="vid_type">Premiere</button>
-            <button data-type="Trailer" class="vid_type">Trailer</button>
-            <button data-type="Review" class="vid_type">Review</button>
-            <button data-type="Studio" class="vid_type">Studio</button>
-            <button data-type="Quote" class="vid_type">Quote</button>
-            <button data-type="Sequels and prequels" class="vid_type">Sequels and prequels</button>
-            <button data-type="Poster" class="vid_type">Poster</button>
-            <button data-type="Frame" class="vid_type">Frame</button>
-            <button data-type="Reward" class="vid_type">Reward</button>
-        </div>
-        <div class="div_for_vidTip">
-            <iframe src="" class="tip_video"></iframe>
-        </div>
-    </section>
-
-    <div class="poster_sec">
         
-    </div>
+            <h1 class="roles">В главных ролях:</h1>
+            <section class="actors_section">
+
+            </section>
+        
+            <section class="videos_sec">
+                <div class="videos_types">
+                    <button data-type="Premiere" class="vid_type">Premiere</button>
+                    <button data-type="Trailer" class="vid_type">Trailer</button>
+                    <button data-type="Review" class="vid_type">Review</button>
+                    <button data-type="Studio" class="vid_type">Studio</button>
+                    <button data-type="Quote" class="vid_type">Quote</button>
+                    <button data-type="Sequels and prequels" class="vid_type">Sequels and prequels</button>
+                    <button data-type="Poster" class="vid_type">Poster</button>
+                    <button data-type="Frame" class="vid_type">Frame</button>
+                    <button data-type="Reward" class="vid_type">Reward</button>
+                </div>
+                <div class="div_for_vidTip">
+                    <iframe src="" class="tip_video"></iframe>
+                </div>
+            </section>
+        
+            <div class="poster_sec">
+
+            </div>
+
+            <center>
+                <footer class="first_page_footer">
+                  <img class="logo_img" src="/img/logo.png" alt="">
+                  <h1>Подпишитесь на E-mail рассылку</h1>
+                  <p>Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму ниже и оформите бесплатную E-mail рассылку! </p>
+                  <form name="subscribe">
+                    <input required type="email" name="email" placeholder="Введите свой E-mail адрес">
+                    <button class="email_submit">Подписаться</button>
+                  </form>
+                </footer>
+              </center>
 
         </div>
 
+
+    <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/src/components/movieCharacter.ts"></script>
     <script type="module" src="movies.ts"></script>
 </body>

@@ -1,0 +1,154 @@
+@media(max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    .nav {
+        width: 483px;
+        overflow: auto;
+        scrollbar-width: none;
+    }
+    .movie_poster {
+        width: 291px;
+        height: 387.68px;
+    }
+    .mv_title {
+        font-size: 40px;
+        line-height: 50.96px;
+        text-align: left;
+    }
+    .watch_trailer_btn {
+        width: 215px;
+        height: 60px;
+    }
+    .roles {
+        font-size: 40px;
+        line-height: 50.96px;
+        text-align: left;
+    }
+    .actors_section {
+        display: grid;
+        grid-template-columns: repeat(3, 250.78px);
+    }
+    .tip_video {
+        width: 849px;
+        height: 454.19px;
+    }
+    .poster_sec {
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 700px;
+    }
+    .nav {
+        width: 483px;
+        overflow: auto;
+        scrollbar-width: none;
+    }
+    .actors_section {
+        grid-template-columns: repeat(2, 250.78px);
+    }
+    .poster_sec {
+        grid-template-columns: repeat(2, 300px);
+    }
+    .poster_img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 500px;
+    }
+    .poster_sec {
+        grid-template-columns: repeat(2, 200px);
+    }
+    .actors_section {
+        grid-template-columns: repeat(2, 230px);
+    }
+    .actor_img {
+        max-width: 230px;
+        max-height: 240px;
+    }
+    .poster_img {
+        max-width: 200px;
+    }
+    .watch_trailer_btn {
+        position: absolute;
+        left: 30px;
+        top: 500px;
+    }
+    .about_movie {
+        gap: 30px;
+    }
+    .mv_title {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .videos_types {
+        display: none;
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        width: 100%;
+        padding: 0 50px;
+    }
+    .about_movie {
+        flex-direction: column;
+        gap: 0;
+    }
+    .watch_trailer_btn {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .movie_poster {
+        width: 225px;
+        height: 299.75px;
+    }
+    .movie_genres_section {
+        font-family: Qanelas;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 14.68px;
+        text-align: left;
+        margin-top: 30px;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .roles {
+        text-align: center;
+    }
+    .actor_img {
+        width: 146.91px;
+        height: 148.26px;
+    }
+    .actors_section {
+        grid-template-columns: repeat(2, 140px);
+    }
+    .actor_name {
+        font-size: 16px;
+    }
+    .character {
+        font-size: 16px;
+    }
+    .tip_video {
+        width: 368px;
+        height: 196.87px;
+    }
+    .poster_sec {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 40px;
+    }
+    .poster_img {
+        max-width: 300px;
+    }
+    .margin{
+        max-width: 80px;
+    }
+}
