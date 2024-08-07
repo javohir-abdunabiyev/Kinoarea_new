@@ -25,6 +25,18 @@
     .container {
         max-width: 700px;
     }
+    .best_movies {
+        h1 {
+            font-size:  50px;
+            margin-bottom: 25px;
+        }
+        .actor_imgs {
+            font-size: 50px;
+        }
+    }
+    .actor_posters {
+        grid-template-columns: repeat(2, 300px);
+    }
 }
 
 @media (max-width:768px) {
@@ -48,6 +60,12 @@
     .div_for_all {
         gap: 30px;
     }
+    .actor_posters {
+        grid-template-columns: repeat(2, 200px);
+        .poster_img {
+            max-width: 240px;
+        }
+    }
 }
 
 @media (max-width:576px) {
@@ -63,5 +81,21 @@
     }
     .margin {
         max-width: 80px;
+    }
+    .best_movies  {
+        h1 {
+            text-align: center;
+            font-size: 35px;
+        }
+    }
+    .actor_imgs {
+        text-align: center;
+        font-size: 35px;
+    }
+    .actor_posters {
+        grid-template-columns: repeat(2, 140px);
+        img {
+            width: 100%;
+        }
     }
 }

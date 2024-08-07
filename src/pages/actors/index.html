@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/style.css">
     <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/src/mainmedia.css">
     <title>Document</title>
 </head>
 <body class="actors_page_body">
@@ -21,6 +23,41 @@
         <div class="actor_bio">
             
         </div>
+    </div>
+
+    <div class="container">
+        <div class="best_movies">
+            <h1>Лучшие фильмы</h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="actor_imgs">Фото</h1>
+        <div class="actor_posters">
+
+        </div>
+    </div>
+
+    <div class="container">
+        <center>
+            <footer class="first_page_footer">
+              <img class="logo_img" src="/img/logo.png" alt="">
+              <h1>Подпишитесь на E-mail рассылку</h1>
+              <p>Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму ниже и оформите бесплатную E-mail рассылку! </p>
+              <form name="subscribe">
+                <input required type="email" name="email" placeholder="Введите свой E-mail адрес">
+                <button class="email_submit">Подписаться</button>
+              </form>
+            </footer>
+        </center>
     </div>
 
     <script type="module" src="actors.ts"></script>

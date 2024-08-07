@@ -389,6 +389,7 @@ input::placeholder {
 }
 
 .first_page_footer {
+    margin-bottom: 50px;
     img {
         margin-bottom: 55px;
     }
@@ -399,7 +400,7 @@ input::placeholder {
         margin-bottom: 34px;
     }
     color: white;
-    input {
+    .mail_inp {
         width: 425px;
         height: 71px;
         border-radius: 10px;
@@ -703,4 +704,58 @@ input::placeholder {
 
 .years_none {
     display: none;
+}
+
+.best_movies {
+    margin-top: 100px;
+    h1 {
+        font-family: Qanelas;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 82.81px;
+        color: white;
+        text-align: left;
+        margin-bottom: 60px;
+    }
+}
+
+.actor_posters {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+.actor_imgs {
+    font-family: Qanelas;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 82.81px;
+    text-align: left;
+    color: white;
+}
+
+.submitConfiden {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 32px;
+    .checkSubmit {
+        width: 17px;
+        height: 17px;
+        border-radius: 2px;
+    }
+}
+
+.close_years_modal {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
 }

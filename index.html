@@ -12,7 +12,7 @@
   <body>
 
     <dialog class="genres_modal"></dialog>
-    <dialog class="years_modal">
+    <dialog class="years_modal menu_modal">
         <h3 data-year="all" class="year active">Всё время</h3>
         <h3 data-year="2015" class="year">2015</h3>
         <h3 data-year="2016" class="year">2016</h3>
@@ -20,6 +20,7 @@
         <h3 data-year="2018" class="year">2018</h3>
         <h3 data-year="2019" class="year">2019</h3>
         <h3 data-year="2020" class="year">2020</h3>
+      <span class="close_years_modal">X</span>
     </dialog>
 
     <div class="backdrop"></div>
@@ -122,17 +123,23 @@
     </div>
 
 
-    <center>
-      <footer class="first_page_footer">
-        <img class="logo_img" src="/img/logo.png" alt="">
-        <h1>Подпишитесь на E-mail рассылку</h1>
-        <p>Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму ниже и оформите бесплатную E-mail рассылку! </p>
-        <form name="subscribe">
-          <input required type="email" name="email" placeholder="Введите свой E-mail адрес">
-          <button class="email_submit">Подписаться</button>
-        </form>
-      </footer>
-    </center>
+      <div class="container">
+            <center>
+            <footer class="first_page_footer">
+              <img class="logo_img" src="/img/logo.png" alt="">
+              <h1>Подпишитесь на E-mail рассылку</h1>
+              <p>Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму ниже и оформите бесплатную E-mail рассылку! </p>
+              <form name="subscribe">
+                <input class="mail_inp" required type="email" name="email" placeholder="Введите свой E-mail адрес">
+                <button class="email_submit">Подписаться</button>
+              </form>
+              <div class="submitConfiden">
+                <input class="checkSubmit" type="checkbox">
+                <p>Соглашаюсь на условия политики конфиденциальности</p>
+              </div>
+            </footer>
+          </center>
+      </div>
 
     
 

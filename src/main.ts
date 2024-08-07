@@ -19,6 +19,7 @@ export const video = document.querySelector("iframe")
 export const cont = document.querySelector(".movies_block") as HTMLElement
 export const show_all_images = document.querySelector(".show_all_images") as HTMLElement
 export const traielrsCont = document.querySelector(".trailers_list") as HTMLElement
+const close_years_modal = document.querySelector(".close_years_modal") as HTMLElement
 const show_all_trailers = document.querySelector(".show_all_trailers") as HTMLElement
 const search_answer_place = document.querySelector(".search_answer") as HTMLElement
 const search_inp = document.querySelector(".search_inp") as HTMLElement
@@ -89,8 +90,6 @@ years_date.forEach((year: any) => {
             function initializeSwiper() {
                 if (window.innerWidth <= 992) {
                     slidesPerView = 3;
-                } else {
-                    slidesPerView = 4;
                 }
                 if(window.innerWidth <= 576) {
                     slidesPerView = 2;
@@ -236,4 +235,8 @@ genres_modal_btn.onclick = () => {
 
 years_btn.onclick = () => {
     years_modal.showModal()
+}
+
+close_years_modal.onclick = () => {
+    years_modal.close()
 }
