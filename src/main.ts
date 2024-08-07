@@ -47,15 +47,32 @@ years_date.forEach((year: any) => {
     getData(`/discover/movie?primary_release_year=${elem.dataset.year}`)
         .then(res => {
             reload(res.results, popularMovies, mCont);
-            new Swiper('.swiper', {
-                modules: [Navigation],
-                slidesPerView: 4,
-                spaceBetween: 23,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                }
-            });
+    
+                 new Swiper('.swiper', {
+                    modules: [Navigation],
+                    slidesPerView: 4,
+                    spaceBetween: 23,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    }, breakpoints: {
+                        320:{
+                            slidesPerView: 1
+                        },
+                        490: {
+                            slidesPerView: 1
+                        },
+                        567: {
+                            slidesPerView: 2
+                        },
+                        768: {
+                            slidesPerView: 2
+                        },
+                        900: {
+                            slidesPerView : 4
+                        }
+                    }
+                });
         });
 
 
@@ -85,36 +102,6 @@ years_date.forEach((year: any) => {
         getData(`/discover/movie?primary_release_year=${yearDate}`)
         .then(res => {
             reload(res.results, popularMovies, mCont);
-            let slidesPerView: any;
-
-            function initializeSwiper() {
-                if (window.innerWidth <= 992) {
-                    slidesPerView = 3;
-                }
-                if(window.innerWidth <= 576) {
-                    slidesPerView = 2;
-                } else {
-                    slidesPerView = 3;
-                }
-    
-                return new Swiper('.swiper', {
-                    modules: [Navigation],
-                    slidesPerView: slidesPerView,
-                    spaceBetween: 23,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev'
-                    }
-                });
-
-                
-            }
-    
-            let swiper = initializeSwiper();
-            window.addEventListener('resize', () => {
-                swiper.destroy(true, true);
-                swiper = initializeSwiper();
-            });
 
             if(year.dataset.year === 'all') {
                 reload(res.results, popularMovies, mCont)
@@ -222,7 +209,6 @@ function debounce(func: any, timeout = 600) {
 const debouncedSearch = debounce((e: any) => {
     getData(`/search/multi?query=${e.target.value}`)
     .then(res => {
-        console.log((res));
         reload(res.results, searchFunc, search_answer_place)
     })
 }, 600);

@@ -663,6 +663,7 @@ input::placeholder {
 
 .search_answer {
     max-height: 700px;
+    padding-bottom: 50px;
     overflow-y: auto;
     scrollbar-width: none;
 }

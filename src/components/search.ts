@@ -1,6 +1,5 @@
 import { imgstarturl } from "./imgload"
 
-
 export function searchFunc(item: any) {
     const div = document.createElement("div")
     div.classList.add("search_answer_div")
@@ -31,7 +30,6 @@ export function searchFunc(item: any) {
     }
 
     movieName_div.append(movie_name)
-
 
     div.append(img, movieName_div)
     

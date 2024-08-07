@@ -78,21 +78,27 @@
 
             </div>
 
-            <center>
+                <center>
                 <footer class="first_page_footer">
                   <img class="logo_img" src="/img/logo.png" alt="">
                   <h1>Подпишитесь на E-mail рассылку</h1>
                   <p>Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму ниже и оформите бесплатную E-mail рассылку! </p>
                   <form name="subscribe">
-                    <input required type="email" name="email" placeholder="Введите свой E-mail адрес">
+                    <input class="mail_inp" required type="email" name="email" placeholder="Введите свой E-mail адрес">
                     <button class="email_submit">Подписаться</button>
                   </form>
+                  <div class="submitConfiden">
+                    <input class="checkSubmit" type="checkbox">
+                    <p>Соглашаюсь на условия политики конфиденциальности</p>
+                  </div>
                 </footer>
               </center>
         </div>
 
 
 
+
+    <script type="module" src="/src/components/search.ts"></script>
     <script type="module" src="/src/components/header.ts"></script>
     <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/src/components/movieCharacter.ts"></script>
